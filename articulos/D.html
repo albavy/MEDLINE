@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Enciclopedia Médica - Dengue</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+	/* Variables CSS */
+        :root {
+           --color-principal: #007bff; /* Color principal para enlaces */
+           --color-fondo: #f9f9f9; /* Color de fondo para artículos */
+           --color-titulo: #d35400; /* Color para títulos */
+           --color-texto: #666666; /* Color para el texto de las descripciones */
+           --color-hover: orange; /* Color al pasar el ratón sobre enlaces */
+           --color-footer: #0056b3; /* Color del fondo del footer */
+           --color-footer-texto: white; /* Color del texto del footer */
+           --color-foco: #0056b3; /* Color del borde cuando hay foco */
+           --color-fondo-foco: rgba(0, 123, 255, 0.1); /* Fondo ligero al hacer foco */
+        }
+	
+	/* Enlace "Saltar a" */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: #0056b3;
+            color: white;
+            padding: 10px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+	/* Enlaces accesibles */
+        a {
+            text-decoration: none;
+            color: var(--color-principal);
+            padding: 2px 2px;
+            display: inline-block;
+        }
+
+	a:focus, button:focus {
+            outline: 3px solid var(--color-foco);
+            background-color: var(--color-fondo-foco);
+            border-radius: 4px;
+        }
+	
+	a:hover {
+            text-decoration: underline;
+            color: var(--color-hover);
+        }
+
+	/* Estilos de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+	/* Imágenes */
+        figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figure figcaption {
+            font-style: italic;
+            color: var(--color-texto);
+        }
+	
+	
+	/* Estilos de accesibilidad */
+        /* Áreas clicables suficientemente grandes */
+        a {
+            padding: 10px;
+            display: inline-block;
+        }
+
+	/* Títulos llamativos y accesibles */
+        h1 {
+    	    font-size: 48px; /* Tamaño grande para hacer que el título sea más prominente */
+    	    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra 3D */
+	}
+	
+	h2 {
+    	    text-decoration: underline; /* Subraya el texto */
+    	    margin-bottom: 16px; /* Espaciado inferior para separar del contenido */
+	}
+	
+	h3 {
+            color: var(--color-titulo);
+            font-weight: bold;
+        }
+	
+	/* Footer */
+        footer {
+            text-align: center;
+            background-color: var(--color-footer);
+            color: var(--color-footer-texto);
+            padding: 10px 0;
+        }
+
+	/* Estilo para el enlace en el footer */
+        footer a {
+            color: var(--color-footer-texto);
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+       <a href="../index.html" aria-label="Volver a la página principal">
+            <img src="../imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+<p>Estás en: <a href="../index.html">Página Principal></a><a href="../indices/indiceD.html">Indice D></a> <a href="D.html">Articulo D</a>
+
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted</p>
+    </header>
+
+    <main id="contenido-principal">
+        <article>
+            <h2>Dengue</h2>
+            <section>
+                 <img src="../imagenes/dengue.jpg" alt="Ilustración que representa los efectos del dengue">
+                
+                <h3>Descripción:</h3>
+                <p>Es una enfermedad febril que afecta a lactantes, niños y adultos. La infección puede ser asintomática, o cursar con síntomas que van desde una fiebre moderada a una fiebre alta incapacitante, con dolor de cabeza intenso, dolor detrás de los ojos, dolor muscular y en las articulaciones, y sarpullidos.</p>
+
+                <h3>Causas:</h3>
+                <p>El virus del dengue se transmite a los seres humanos por la picadura de mosquitos hembra infectadas, principalmente del mosquito <i>Aedes aegypti</i>.</p>
+
+                 <h3>Artículos Relacionados:</h3>
+                <p>Para leer más sobre el dengue, visita el siguiente enlace:</p>
+                <a href="https://www.who.int/es/news-room/fact-sheets/detail/dengue-and-severe-dengue#:~:text=El%20virus%20del%20dengue%20se,a%20la%20del%20Aedes%20aegypti.">Leer el Artículo sobre el Dengue</a>
+
+                <h3>Videos Relacionados:</h3>
+                <p>Video sobre el dengue:</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/92BNNlajbWk?si=qMEgJl5NpC5YaZzt" title="Video sobre el dengue: ¿Qué es y cómo afecta?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <p>Para volver a la página principal, haz clic en el siguiente enlace: <a href="../index.html">Volver a la Página Principal</a>.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <address>
+            
+            <p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+            <p>Universidad de Alicante</p>
+        </address>
+    </footer>
+
+</body>
+</html>
