@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia Médica - Formulario de Contacto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Estilo por defecto -->
+    <link rel="stylesheet" href="../estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="../estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="../estilos/impresion.css" media="Impresion">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="../estilos/accesible.css" title="Estilo Accesible">
+
+
+    <script>
+    function cambiarEstilo(titulo) {
+        var i, enlaces;
+       	enlaces = document.getElementsByTagName("link");
+        for (i = 0; i < enlaces.length; i++) {
+            if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                enlaces[i].disabled = true;
+                if (enlaces[i].getAttribute("title") === titulo) {
+                    enlaces[i].disabled = false;
+                }
+            }
+        }
+     }
+    </script>
+
+
+   </head>
+<body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+       <a href="../index.html" aria-label="Volver a la página principal">
+            <img src="../imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+        <p>Estás en: <a href="../index.html">Página Principal</a> > <a href="formulariocontacto.html">Formulario de contacto</a></p>
+<!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button onclick="cambiarEstilo('Modo Noche')">Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+        </div>
+
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted</p>
+    </header>
+
+  <main id="contenido-principal">
+<h2 class="form-title">Formulario de Contacto</h2>
+         <form action="respuestaformulariocontacto.html" method="post">
+            <fieldset>
+                <legend>Información de Contacto</legend>
+
+                <label for="asunto">Asunto (Requerido):</label>
+                <input type="text" id="asunto" name="asunto" required placeholder="Ingrese el asunto">
+
+                <label for="comentario">Comentario o Pregunta (Requerido):</label>
+                <textarea id="comentario" name="comentario" rows="4" required placeholder="Ingrese su comentario o pregunta"></textarea>
+
+                <label for="yo_soy">Yo soy:</label>
+                <select id="yo_soy" name="yo_soy">
+                    <option value="cientifico">Científico</option>
+                    <option value="educador">Educador</option>
+                    <option value="fabricante">Fabricante</option>
+                    <option value="medico">Médico</option>
+                    <option value="paciente">Paciente</option>
+                    <option value="periodista">Periodista</option>
+                </select>
+
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+
+                <div class="radio-group">
+                    <label>Sexo:</label>
+		    <label for="hombre">Hombre</label>
+                    <input type="radio" id="hombre" name="sexo" value="hombre">
+		    <label for="mujer">Mujer</label>
+                    <input type="radio" id="mujer" name="sexo" value="mujer">
+		    <label for="otro">Otro</label>             
+                    <input type="radio" id="otro" name="sexo" value="otro">
+                </div>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
+
+                <label for="informacion">Deseo recibir más información:</label>
+		<input type="checkbox" id="informacion" name="informacion">
+
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+
+        <p>Para volver a la página principal, haga clic en el siguiente enlace: <a href="../index.html">Volver a la Página Principal</a>.</p>
+    </main>
+
+    <footer>
+        <address>
+            <p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+            <p>Universidad de Alicante</p>
+        </address>
+    </footer>
+</body>
+</html>

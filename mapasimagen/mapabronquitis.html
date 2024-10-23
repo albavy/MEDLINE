@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Imagen - Temas Destacados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Estilo por defecto -->
+    <link rel="stylesheet" href="../estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="../estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="../estilos/impresion.css" media="Impresion">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="../estilos/accesible.css" title="Estilo Accesible">
+
+
+    <script>
+    function cambiarEstilo(titulo) {
+        var i, enlaces;
+       	enlaces = document.getElementsByTagName("link");
+        for (i = 0; i < enlaces.length; i++) {
+            if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                enlaces[i].disabled = true;
+                if (enlaces[i].getAttribute("title") === titulo) {
+                    enlaces[i].disabled = false;
+                }
+            }
+        }
+     }
+    </script>
+
+</head>
+<body>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+ 	<a href="../index.html" aria-label="Volver a la página principal">
+            <img src="../imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+<p>Estás en: <a href="../index.html">Página Principal></a><a href="../articulos/B.html">Artículo B></a><a href="mapabronquitis.html">Mapa Bronquitis</a>
+
+<!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button onclick="cambiarEstilo('Modo Noche')">Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+        </div>
+
+              <h1>MedlinePlus</h1>
+        <p>Información de salud para usted.</p>
+    </header>
+
+
+<main id="contenido-principal">    <h2>Mapa de Imagen - Bronquitis</h2>
+     <img src="../imagenes/bronquitis_2.jpg" alt="Ilustración de bronquitis con partes etiquetadas" usemap="#bronquitis">
+
+    <map name="bronquitis">
+	<area shape="rect" coords="180,120,340,200" alt="Bronquio Inflamado" href="https://www.mayoclinic.org/es/diseases-conditions/bronchitis/symptoms-causes/syc-20355566">
+        <area shape="rect" coords="140,280,360,450" alt="Exceso de Moco" href="https://medlineplus.gov/spanish/ency/article/003073.htm">
+
+        <area shape="circle" coords="520,160,80" alt="Bronquio Inflamado Detallado" href="https://www.ncbi.nlm.nih.gov/books/NBK54103/">
+        <area shape="circle" coords="500,400,100" alt="Exceso de Moco Detallado" href="https://www.lung.org/lung-health-diseases/lung-disease-lookup/bronchitis/learn-about-bronchitis">
+
+        <area shape="poly" coords="160,60,200,100,180,140,140,100,120,60" alt="Tráquea" href="https://medlineplus.gov/ency/article/002323.htm">
+        <area shape="poly" coords="350,100,380,150,370,200,320,150,330,100" alt="Alvéolos" href="https://medlineplus.gov/spanish/trachealdisorders.html">
+    </map>
+
+ 
+</main>
+
+
+    <p>Para volver a la página principal pulsa <a href="../index.html">Volver a la Página Principal</a>.</p>
+
+    <footer>
+        <address>
+            
+            <p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+            <p>Universidad de Alicante</p>
+        </address>
+    </footer>
+</body>
+</html>
