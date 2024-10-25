@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia Médica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ 
+    <!-- script de Google Translate -->
+    <meta name="google" content="notranslate">
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script para traducir automáticamente la página al inglés -->
+    <script type="text/javascript">
+      function translatePageToEnglish() {
+          var select = document.querySelector('.goog-te-combo');
+          if (select) {
+              select.value = 'en'; // Idioma inglés
+              select.dispatchEvent(new Event('change')); // Forzar la traducción
+          }
+      }
+
+      window.onload = translatePageToEnglish; // Traducir la página automáticamente al inglés
+    </script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="../estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="../estilos/impresion.css" media="Impresion">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="../estilos/accesible.css" title="Estilo Accesible">
+
+    <!-- Estilo accesible y alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/accesible_altocontraste.css" title="Accesible Alto Contraste">
+
+
+   <script>
+    var estiloActual = 'Estilo predeterminado'; // Variable para rastrear el estilo actual
+    var idiomaActual = 'es'; // Idioma actual
+
+        function cambiarEstilo(nuevoEstilo) {
+            var enlaces = document.getElementsByTagName("link");
+            for (var i = 0; i < enlaces.length; i++) {
+                if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                    enlaces[i].disabled = true; // Deshabilitar todos los estilos
+                    if (enlaces[i].getAttribute("title") === nuevoEstilo) {
+                        enlaces[i].disabled = false; // Habilitar el estilo seleccionado
+                    }
+                }
+            }
+
+            // Actualizar el estilo actual
+            estiloActual = nuevoEstilo;
+
+            // Actualizar el icono del botón de modo noche
+            actualizarIcono(estiloActual);
+        }
+
+        function actualizarIcono(estilo) {
+            var botonNoche = document.getElementById('modo-noche');
+            if (estilo === 'Modo Noche') {
+                botonNoche.innerHTML = '<i class="fas fa-sun"></i> Modo Día'; // Icono de sol
+            } else {
+                botonNoche.innerHTML = '<i class="fas fa-moon"></i> Modo Noche'; // Icono de luna
+            }
+        }
+
+        // Función para manejar el clic en el botón de modo noche
+        function toggleModoNoche() {
+            if (estiloActual === 'Modo Noche') {
+                cambiarEstilo('Estilo predeterminado'); // Volver al estilo original
+            } else {
+                cambiarEstilo('Modo Noche'); // Cambiar a modo noche
+            }
+        }
+
+
+    </script>
+
+   </head>
+<body>
+<div id="google_translate_element"></div>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+        <a href="../index.html" aria-label="Volver a la página principal">
+            <img src="../imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+<p>Estás en: <a href="../index.html">Página Principal></a><a href="mapaasma.html">Mapa Asma</a>
+<!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button id="modo-noche" onclick="toggleModoNoche()"><i class="fas fa-moon"></i> Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+        <button onclick="cambiarEstilo('Accesible Alto Contraste')">Accesible Alto Contraste</button>
+        </div>
+
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted.</p>
+    </header>
+
+    <main id="contenido-principal">
+       <h2 id="asma">Mapa de Imagen - Asma</h2>
+         <img src="../imagenes/asmamapa.jpg" alt="Infográfico sobre las diferentes partes relacionadas con el asma" usemap="#asma-map" width="512" height="512">
+        <map name="asma-map">
+ 
+ <area shape="circle" coords="256,256,75" href="https://rochepacientes.es/fibrosis-pulmonar-idiopatica/como-son-pulmones.html" alt="Pulmones" title="Pulmones">
+ <area shape="circle" coords="370,370,50" href="https://medlineplus.gov/spanish/ency/article/002324.htm" alt="Brónquios" title="Brónquios">
+ 
+ <area shape="rect" coords="25,50,150,200" href="https://www.sanitas.es/biblioteca-de-salud/enfermedades-y-trastornos/neumologicas/como-prevenir-asma" alt="Medidas Preventivas" title="Medidas Preventivas">
+            <area shape="rect" coords="25,325,150,475" href="https://www.mayoclinic.org/es/diseases-conditions/asthma/diagnosis-treatment/drc-20369660" alt="Tratamiento" title="Tratamiento">
+            <area shape="rect" coords="350,25,475,150" href="https://www.nhlbi.nih.gov/es/salud/asma" alt="Concepto" title="Concepto">
+            <area shape="poly" coords="350,150,400,200,475,200,475,250,450,275,350,225" href="https://www.nhlbi.nih.gov/es/salud/asma/causas" alt="Causas" title="Causas">
+            <area shape="poly" coords="325,350,350,450,450,450,475,400,475,350,400,325" href="sintomasymedicamentosasma.html" alt="Síntomas" title="Síntomas y Medicamentos">
+        </map>
+	
+	<p>Para volver a la página principal pulsa <a href="../index.html">Volver a la Página Principal</a>.</p>
+    </main>
+
+    <footer id="contacto"> 
+         <address>
+            
+            <p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+            <p>Universidad de Alicante</p>
+        </address>
+    </footer>
+</body>
+</html>
