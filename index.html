@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Enciclopedia Médica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- script de Google Translate -->
+    <meta name="google" content="notranslate">
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script para traducir automáticamente la página al inglés -->
+    <script>
+      function translatePageToEnglish() {
+          var select = document.querySelector('.goog-te-combo');
+          if (select) {
+              select.value = 'en'; // Idioma inglés
+              select.dispatchEvent(new Event('change')); // Forzar la traducción
+          }
+      }
+
+      window.onload = translatePageToEnglish; // Traducir la página automáticamente al inglés
+    </script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="estilos/impresion.css" media="print">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="estilos/accesible.css" title="Estilo Accesible">
+
+    <!-- Estilo accesible y alto contraste -->
+    <link rel="alternate stylesheet" href="estilos/accesible_altocontraste.css" title="Accesible Alto Contraste">
+
+
+   <script>
+      var estiloActual = 'Estilo predeterminado'; // Variable para rastrear el estilo actual
+      var idiomaActual = 'es'; // Idioma actual
+
+        function cambiarEstilo(nuevoEstilo) {
+            var enlaces = document.getElementsByTagName("link");
+            for (var i = 0; i < enlaces.length; i++) {
+                if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                    enlaces[i].disabled = true; // Deshabilitar todos los estilos
+                    if (enlaces[i].getAttribute("title") === nuevoEstilo) {
+                        enlaces[i].disabled = false; // Habilitar el estilo seleccionado
+                    }
+                }
+            }
+
+            // Actualizar el estilo actual
+            estiloActual = nuevoEstilo;
+
+            // Actualizar el icono del botón de modo noche
+            actualizarIcono(estiloActual);
+        }
+
+        function actualizarIcono(estilo) {
+            var botonNoche = document.getElementById('modo-noche');
+            if (estilo === 'Modo Noche') {
+                botonNoche.innerHTML = '<i class="fas fa-sun"></i> Modo Día'; // Icono de sol
+            } else {
+                botonNoche.innerHTML = '<i class="fas fa-moon"></i> Modo Noche'; // Icono de luna
+            }
+        }
+
+        // Función para manejar el clic en el botón de modo noche
+        function toggleModoNoche() {
+            if (estiloActual === 'Modo Noche') {
+                cambiarEstilo('Estilo predeterminado'); // Volver al estilo original
+            } else {
+                cambiarEstilo('Modo Noche'); // Cambiar a modo noche
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="google_translate_element"></div>
+    <!-- Enlace Saltar a contenido principal -->
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <header>
+        <img src="imagenes/logo.png" alt="MedlinePlus Logo">
+	<p>Estás en: <a href="index.html">Página Principal</a></p>
+	
+	<!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button id="modo-noche" onclick="toggleModoNoche()"><i class="fas fa-moon"></i> Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+ 	<button onclick="cambiarEstilo('Accesible Alto Contraste')">Accesible Alto Contraste</button>
+        </div>
+
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted.</p>
+    </header>
+
+    <nav aria-label="Índice Alfabético">
+        <ul>
+            <li><a href="indices/indiceA.html"><i class="fas fa-book"></i>A</a></li>
+            <li><a href="indices/indiceB.html"><i class="fas fa-book"></i>B</a></li>
+            <li><a href="indices/indiceC.html"><i class="fas fa-book"></i>C</a></li>
+            <li><a href="indices/indiceD.html"><i class="fas fa-book"></i>D</a></li>
+            <li><a href="error404.html">E</a></li>
+	    <li><a href="error404.html">F</a></li>
+            <li><a href="error404.html">G</a></li>
+            <li><a href="error404.html">H</a></li>
+            <li><a href="error404.html">I</a></li>
+            <li><a href="error404.html">J</a></li>
+            <li><a href="error404.html">K</a></li>
+            <li><a href="error404.html">L</a></li>
+            <li><a href="error404.html">M</a></li>
+            <li><a href="error404.html">N</a></li>
+            <li><a href="error404.html">O</a></li>
+            <li><a href="error404.html">P</a></li>
+            <li><a href="error404.html">Q</a></li>
+            <li><a href="error404.html">R</a></li>
+            <li><a href="error404.html">S</a></li>
+            <li><a href="error404.html">T</a></li>
+            <li><a href="error404.html">U</a></li>
+            <li><a href="error404.html">V</a></li>
+            <li><a href="error404.html">W</a></li>
+            <li><a href="error404.html">X</a></li>
+            <li><a href="error404.html">Y</a></li>
+            <li><a href="error404.html">Z</a></li>
+        </ul>
+    </nav>
+
+    <main id="contenido-principal">
+	<section id="tabla-contenidos">
+            <h2>Tabla de Contenidos</h2>
+            <ul>
+                <li><a href="#buscador"><i class="fas fa-search"></i> Buscar en la Enciclopedia</a></li>
+                <li><a href="#temas-destacados"><i class="fas fa-star"></i> Temas Destacados</a></li>
+                <li><a href="#contacto"><i class="fas fa-comment-dots"></i>Contacto</a></li>
+                <li><a href="#Formulario"><i class="fas fa-search"></i> Formulario</a></li>
+                <li><a href="#mapa-sitio"><i class="fas fa-map"></i> Mapa del Sitio</a></li>
+            </ul>
+        </section>
+        
+   	<section id="enciclopedia-medica">
+            <h2 id="introduccion">Enciclopedia Médica</h2>
+            <p>La Enciclopedia Ilustrada de Salud incluye más de 4,000 artículos acerca de enfermedades, exámenes <abbr title="Exámenes de Diagnóstico por Imágenes">EDI</abbr>, síntomas, lesiones y procedimientos quirúrgicos. Aquí encontrará información detallada sobre una variedad de temas médicos.</p>
+            <h4>*Buscar en la Enciclopedia*</h4>
+            <p>Utiliza nuestro buscador para explorar la enciclopedia:</p>
+            <a href="buscador/buscar.html">Ir al Buscador</a>
+	
+        </section>
+
+        <section id="temas-destacados">
+            <h2>Temas Destacados:</h2>
+            <div style="margin-bottom: 20px;"></div> <!-- Espacio entre el título y los artículos -->
+	        <article>
+                    	<h2><a href="https://www.mayoclinic.org/es/diseases-conditions/asthma/symptoms-causes/syc-20369653"><i class="fas fa-lungs"></i> Artículo 1: Asma</a></h2>
+                	<p>El asma es una enfermedad crónica que afecta a personas de todas las edades. Se debe a la inflamación y la contracción de los músculos que rodean las vías respiratorias, las cuales dificultan la respiración.</p>
+	 		<figure>
+                	<img src="imagenes/asma.jpg" alt="Imagen Asma">
+<figcaption>Asma: Enfermedad crónica que afecta las vías respiratorias.</figcaption>
+                	</figure>
+                	<p>Para más información haga clic en los siguientes enlaces:</p>
+                	<a href="https://www.mayoclinic.org/es/diseases-conditions/asthma/symptoms-causes/syc-20369653">Leer el artículo sobre el Asma </a><br><br>
+                	<a href="tablas/sintomasymedicamentosasma.html">Ver los síntomas y medicamentos para el asma</a><br><br>
+			<a href="mapasimagen/mapaasma.html">Ver el mapa de imagen sobre el asma</a>
+               	</article>
+
+            	<article>
+                	<h2><a href="https://www.mayoclinic.org/es/diseases-conditions/epilepsy/symptoms-causes/syc-20350093"><i class="fas fa-brain"></i> Artículo 2: Epilepsia</a></h2>
+                	<p>La epilepsia es un trastorno cerebral en el cual una persona tiene convulsiones repetidas durante un tiempo. Las convulsiones son episodios de actividad eléctrica descontrolada y anormal de las neuronas que puede causar cambios en la atención o el comportamiento como movimientos corporales.</p>
+                	<figure>
+                    	<img src="imagenes/epilepsia.jpg" alt="Imagen Epilepsia">
+                    	<figcaption>Epilepsia: Trastorno cerebral caracterizado por convulsiones repetidas.</figcaption>
+                	</figure>
+                	<p>Para más información haga clic en el siguiente enlace:</p>
+                	<a href="https://www.mayoclinic.org/es/diseases-conditions/epilepsy/symptoms-causes/syc-20350093">Leer el artículo sobre la Epilepsia</a>
+            	</article>
+
+            	<article>
+               	 	<h2><a href="https://www.cun.es/enfermedades-tratamientos/enfermedades/gripe"><i class="fas fa-virus"></i> Artículo 3: Gripe</a></h2>
+                	<p>La gripe (influenza) es una infección viral respiratoria que causa fiebre, escalofríos, secreción nasal, dolor del cuerpo y tos. Se propaga fácilmente de persona a persona. La gripe puede causar síntomas de moderados a graves. La mayoría de las personas se recuperan.</p>
+                 	<figure>
+                    	<img src="imagenes/gripe.jpg" alt="Imagen Gripe">
+                    	<figcaption>Gripe: Infección viral respiratoria común.</figcaption>
+                	</figure>
+                	<p>Para más información haga clic en los siguientes enlaces:</p>
+                	<a href="https://www.cun.es/enfermedades-tratamientos/enfermedades/gripe">Leer el artículo sobre la Gripe</a><br><br>
+			<a href="tablas/sintomasytiposgripe.html">Leer sobre los síntomas y tipos de la gripe</a>
+            	</article>
+
+            	<article>
+                	<h2><a href="https://www.mayoclinic.org/es/diseases-conditions/syphilis/symptoms-causes/syc-20351756"><i class="fas fa-syringe"></i> Artículo 4: Sífilis</a></h2>
+                	<p>La sífilis es una infección de transmisión sexual (ITS) bacteriana que se puede prevenir y curar. Si no se trata puede causar graves problemas de salud.</p>
+                	<figure>
+                    	<img src="imagenes/sifilis.jpg" alt="Imagen Sífilis">
+                    	<figcaption>Sífilis: Infección de transmisión sexual que se puede prevenir y tratar.</figcaption>
+                	</figure>
+                	<p>Para más información haga clic en el siguiente enlace:</p>
+                	<a href="https://www.mayoclinic.org/es/diseases-conditions/syphilis/symptoms-causes/syc-20351756">Leer el artículo sobre la Sífilis</a>
+            	</article>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si desea ponerse en contacto con nosotros, por favor rellene el siguiente formulario:</p>
+            <a href="formularios/formulariocontacto.html"><i class="fas fa-envelope"></i> Rellenar el Formulario de Contacto</a>
+        </section>
+	 
+	<section id="Formulario">
+            <h2>Opinión</h2>
+            <p>Puede reflejarnos su opinion en el siguiente enlace:</p>
+            <a href="formularios/formulariosatisfaccion.html"><i class="fas fa-comment-dots"></i>Rellenar el Formulario de Satisfacción</a>
+      
+  	</section>
+
+	<section id="mapa-sitio">
+            <h2>Mapa del Sitio</h2>
+	    <p>Para acceder al Mapa del Sitio Web, haga clic en el siguiente enlace:</p>
+            <a href="mapaweb.html"><i class="fas fa-map"></i>Ver Mapa del Sitio Web</a>
+  	</section>
+
+	<section id="accesibilidad">
+	    <h2>Declaración de Accesibilidad</h2>
+	    <p>Para leer la declaración completa sobre la accesibilidad del sitio, por favor visite el siguiente enlace:</p>
+            <a href="accesibilidad.html"><i class="fas fa-universal-access"></i>Leer la Declaración de Accesibilidad</a>
+        </section>
+
+        <section id="documento-accesible" class="margen-adicional">
+    	    <h2>Documento Electrónico</h2>
+    	    <p>Para más información de MedlinePlus puede acceder al documento electrónico accesible que se muestra a continuación:</p>
+            <a href="documentos/documento_accesible.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Ver Documento Accesible (PDF)</a>
+
+	    <p>Para comprobar la accesibilidad de nuestro documento electrónico accesible puede acceder al siguiente documento no accesible y compararlo:</p>
+            <a href="documentos/documento_no_accesible.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Ver Documento No Accesible (PDF)</a>
+        </section>
+
+    </main>
+
+ <footer> 
+ 	<address>
+ 	<p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+        <p>Universidad de Alicante</p>
+ 	</address>
+ </footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Accesibilidad - Enciclopedia Médica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+   <!-- script de Google Translate -->
+    <meta name="google" content="notranslate">
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script para traducir automáticamente la página al inglés -->
+    <script>
+      function translatePageToEnglish() {
+          var select = document.querySelector('.goog-te-combo');
+          if (select) {
+              select.value = 'en'; // Idioma inglés
+              select.dispatchEvent(new Event('change')); // Forzar la traducción
+          }
+      }
+
+      window.onload = translatePageToEnglish; // Traducir la página automáticamente al inglés
+    </script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="estilos/impresion.css" media="Impresion">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="estilos/accesible.css" title="Estilo Accesible">
+
+    <!-- Estilo accesible y alto contraste -->
+    <link rel="alternate stylesheet" href="estilos/accesible_altocontraste.css" title="Accesible Alto Contraste">
+
+
+
+   <script>
+   var estiloActual = 'Estilo predeterminado'; // Variable para rastrear el estilo actual
+   var idiomaActual = 'es'; // Idioma actual
+
+        function cambiarEstilo(nuevoEstilo) {
+            var enlaces = document.getElementsByTagName("link");
+            for (var i = 0; i < enlaces.length; i++) {
+                if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                    enlaces[i].disabled = true; // Deshabilitar todos los estilos
+                    if (enlaces[i].getAttribute("title") === nuevoEstilo) {
+                        enlaces[i].disabled = false; // Habilitar el estilo seleccionado
+                    }
+                }
+            }
+
+            // Actualizar el estilo actual
+            estiloActual = nuevoEstilo;
+
+            // Actualizar el icono del botón de modo noche
+            actualizarIcono(estiloActual);
+        }
+
+        function actualizarIcono(estilo) {
+            var botonNoche = document.getElementById('modo-noche');
+            if (estilo === 'Modo Noche') {
+                botonNoche.innerHTML = '<i class="fas fa-sun"></i> Modo Día'; // Icono de sol
+            } else {
+                botonNoche.innerHTML = '<i class="fas fa-moon"></i> Modo Noche'; // Icono de luna
+            }
+        }
+
+        // Función para manejar el clic en el botón de modo noche
+        function toggleModoNoche() {
+            if (estiloActual === 'Modo Noche') {
+                cambiarEstilo('Estilo predeterminado'); // Volver al estilo original
+            } else {
+                cambiarEstilo('Modo Noche'); // Cambiar a modo noche
+            }
+        }
+
+
+    </script>
+
+
+    </head>
+<body>
+<div id="google_translate_element"></div>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+<a href="index.html" aria-label="Volver a la página principal">
+            <img src="imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+<p>Estás en: <a href="index.html">Página Principal></a> <a href="accesibilidad.html">Declaración de Accesibilidad</a>
+<!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button id="modo-noche" onclick="toggleModoNoche()"><i class="fas fa-moon"></i> Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+        <button onclick="cambiarEstilo('Accesible Alto Contraste')">Accesible Alto Contraste</button>
+        </div>
+
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted</p>
+
+        <h2>Declaración de Accesibilidad</h2>
+          </header>
+
+    <main id="contenido-principal">
+        <p>En <strong>[Medline]</strong>, nos comprometemos a garantizar la accesibilidad de nuestro sitio para todas las personas, incluidas aquellas con discapacidades. Hemos implementado medidas para asegurar que nuestro contenido sea accesible, conforme a las pautas del <strong><a href="https://www.w3.org/WAI/standards-guidelines/wcag/es">Web Content Accessibility Guidelines (WCAG)</a></strong>, nivel AA.</p>
+
+        <h3>Objetivos de Accesibilidad</h3>
+        <ol>
+            <li><strong>Perceptibilidad</strong>: Proporcionamos contenido que es presentable de diversas maneras, sin comprometer su significado.</li>
+            <li><strong>Operabilidad</strong>: Aseguramos que todos los elementos interactivos sean accesibles y utilizables con teclado y otros dispositivos de asistencia.</li>
+            <li><strong>Comprensibilidad</strong>: Nos esforzamos por hacer que nuestro contenido sea fácil de leer y entender.</li>
+            <li><strong>Robustez</strong>: Nuestro contenido se puede interpretar de manera fiable por una amplia variedad de agentes de usuario, incluidas tecnologías de asistencia.</li>
+        </ol>
+ <section>
+        <h3>Características de accesibilidad implementadas</h3>
+        <ul>
+            <li><strong>Identificación del idioma:</strong> El idioma principal de la página web está especificado con el atributo <code>lang="es"</code> en la etiqueta <code>html</code>, para garantizar que los lectores de pantalla procesen el contenido adecuadamente.</li>
+            <li><strong>Etiquetado semántico:</strong> Se utilizan etiquetas semánticas de HTML5 como <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code> y <code>&lt;footer&gt;</code> para estructurar correctamente la página.</li>
+            <li><strong>Texto alternativo:</strong> Todas las imágenes del sitio web incluyen textos alternativos descriptivos a través del atributo <code>alt</code>. En el caso de imágenes decorativas, se utiliza un <code>alt=""</code> vacío.</li>
+            <li><strong>Mecanismos de navegación:</strong> El sitio cuenta con un mapa del sitio y migas de pan para facilitar la orientación y navegación, conforme a los requisitos de las pautas WCAG 2.4.5 (Mapa del Sitio) y 2.4.8 (Migas de Pan).</li>
+            <li><strong>Enlaces descriptivos:</strong> Todos los enlaces proporcionan un texto claro y único que describe su destino, cumpliendo con WCAG 2.4.4.</li>
+        </ul>
+    </section>
+
+        <p>Agradecemos tu comprensión y colaboración para ayudarnos a hacer de <strong>[Medline]</strong> un lugar accesible para todos.</p>
+    </main>
+
+    <footer>
+<p>Estamos en un proceso continuo para mejorar la accesibilidad de nuestro sitio web. Si encuentras alguna barrera de accesibilidad en nuestro contenido, te invitamos a comunicarnos tus inquietudes a través del siguiente contacto:</p>
+       <address>
+            <p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+            <p>Universidad de Alicante</p>
+        </address>
+
+    </footer>
+</body>
+</html>
