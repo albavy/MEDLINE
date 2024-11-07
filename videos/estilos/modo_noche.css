@@ -1,0 +1,398 @@
+/* modo_noche.css */
+
+/* Estilos para el Modo Noche */
+:root {
+    --color-principal: #1e90ff; /* Color principal para enlaces */
+    --color-fondo: #121212; /* Color de fondo oscuro */
+    --color-titulo: #ffcc00; /* Color para títulos */
+    --color-texto: #e0e0e0; /* Color del texto de las descripciones */
+    --color-hover: #ffcc00; /* Color al pasar el ratón sobre enlaces */
+    --color-footer: #333333; /* Color del fondo del footer */
+    --color-footer-texto: #ffffff; /* Color del texto del footer */
+    --color-foco: #1e90ff; /* Color del borde cuando hay foco */
+    --color-fondo-foco: rgba(30, 144, 255, 0.2); /* Fondo ligero al hacer foco */
+    --color-titulo-articulo: #ff69b4; /* Color rosa para títulos de artículos */
+}
+
+/* Enlace "Saltar a" */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background-color: var(--color-footer);
+            color: (--color-footer-texto);
+            padding: 10px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+	
+/* Enlaces accesibles */
+        a {
+            text-decoration: none;
+            color: var(--color-principal);
+            padding: 10px;
+            display: inline-block;
+        }
+
+	a:focus, button:focus {
+            outline: 3px solid var(--color-foco);
+            background-color: var(--color-fondo-foco);
+            border-radius: 4px;
+        }
+	
+	a:hover {
+            text-decoration: underline;
+            color: var(--color-hover);
+        }
+
+/* Estilos de navegación */
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+
+
+/* Body */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Footer */
+        footer {
+            text-align: center;
+            background-color: var(--color-footer);
+            color: var(--color-footer-texto);
+            padding: 10px 0;
+        }
+
+        /* Estilo para el enlace en el footer */
+        footer a {
+            color: var(--color-footer-texto);
+            text-decoration: none;
+        }
+ 	
+
+ /* Maquetación adaptativa del formulario para modo noche */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1f1f1f; /* Fondo oscuro para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra más intensa para modo noche */
+    color: var(--color-texto); /* Texto claro */
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 16px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-titulo); /* Títulos del formulario con color de título */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-texto); /* Color claro para las etiquetas */
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: #333333; /* Fondo oscuro para los campos de entrada */
+    color: var(--color-texto); /* Texto claro */
+    border: 1px solid #444444; /* Borde gris oscuro */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: var(--color-principal); /* Fondo azul para el botón de envío */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 12px 0;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-hover); /* Cambiar a amarillo al hacer hover */
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--color-foco); /* Borde azul claro al enfocar */
+    background-color: var(--color-fondo-foco); /* Fondo ligeramente iluminado en foco */
+}
+
+.radio-group label {
+    margin-right: 10px;
+}
+ /* Títulos de los formularios centrados */
+.form-title {
+    text-align: center; /* Centra el texto */
+    text-decoration: underline; /* Subraya el título */
+    margin-bottom: 20px; /* Añade un margen inferior */
+    font-weight: bold; /* Negrita para destacar */
+}
+
+/* Estilo adicional para mostrar el color elegido */
+        .color-preview {
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+            margin-left: 10px;
+            border: 1px solid #ccc;
+            vertical-align: middle;
+            background-color: #ffffff; /* Color predeterminado */
+        }
+
+
+/* Tabla de Contenidos */
+        #tabla-contenidos ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #tabla-contenidos ul li {
+            margin-bottom: 8px;
+        }
+        #tabla-contenidos a {
+            text-decoration: none;
+            color: var(--color-principal);
+        }
+        #tabla-contenidos a:hover {
+            text-decoration: underline;
+        }
+
+/* Títulos llamativos y accesibles */
+        h1 {
+    	    font-size: 48px; /* Tamaño grande para hacer que el título sea más prominente */
+    	    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Sombra 3D blanca */
+	}
+	
+	h2 {
+    	    text-decoration: underline; /* Subraya el texto */
+    	    margin-bottom: 16px; /* Espaciado inferior para separar del contenido */
+	}
+	
+	h3 {
+            color: var(--color-titulo);
+            font-weight: bold;
+        }
+	/* Estilo para los enlaces dentro de los títulos */
+	h1 a,
+	h2 a,
+	h3 a {
+    	color: var(--color-titulo-articulo); /* Títulos de artículos (enlaces) en rojo */
+	}
+
+	h1 a:hover,
+	h2 a:hover,
+	h3 a:hover {
+    	text-decoration: underline; /* Subrayar al pasar el ratón */
+    	color: var(--color-hover); /* Cambiar color al pasar el ratón */
+	}
+
+
+/* Imágenes */
+figure img {
+    filter: brightness(0.9); /* Reduce el brillo de las imágenes */
+    max-width: 100%;
+    height: auto;
+    }
+
+    figure figcaption {
+    font-style: italic;
+    color: var(--color-texto);
+    }
+	
+/* Estilos de accesibilidad */
+/* Áreas clicables suficientemente grandes */
+    a {
+       padding: 10px;
+       display: inline-block;
+    }
+
+/* Layout para los temas destacados */
+    	#temas-destacados {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    	    gap: 20px; /* Espacio entre las columnas y filas */
+    	    margin-top: 20px;
+    	}
+
+    	#temas-destacados article {
+            background-color: var(--color-fondo);
+            padding: 10px;
+	    border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	    overflow: hidden; /* Evitar que el contenido desborde el área del artículo */
+    	}
+
+/* Margen adicional entre el enlace y el correo */
+        .margen-adicional {
+            margin-bottom: 20px; /* Añadir margen inferior de 20px */
+        }
+
+/* Diseño adaptativo */
+	/* Pantallas grandes */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 36px;
+            }
+        }
+	/* Pantallas medianas */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+        }
+	/* Pantallas pequeñas */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+/* Adaptaciones para pantallas pequeñas y medianas */
+@media (max-width: 768px) {
+    #temas-destacados {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+}
+
+header img {
+    max-width: 100%; /* El logo se adaptará al ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios en línea alrededor de la imagen */
+    margin: 0 auto; /* Centra el logo en el contenedor si está en un contenedor con ancho definido */
+}
+
+
+#temas-destacados article {
+    background-color: var(--color-fondo);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Evitar que el contenido desborde el área del artículo */
+}
+
+
+        /* Estilos para Font Awesome */
+        .fa-beat,
+        .fa-beat-fade,
+        .fa-fade,
+        .fa-flip,
+        .fa-spin,
+        .fa-rotate-by {
+            animation-delay: 0s; /* Valor válido */
+        }
+
+        .fa-rotate-by {
+            transform: rotate(0deg); /* Valor válido */
+        }
+
+ /* Estilos de la tabla para modo noche */
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: white; /* Texto blanco para mejor contraste */
+}
+
+caption {
+    font-style: italic;
+    caption-side: top;
+    font-variant: small-caps;
+    color: #cccccc; /* Texto gris claro para los subtítulos */
+}
+
+thead th:nth-child(1) {
+    width: 40%;
+}
+
+thead th:nth-child(2) {
+    width: 60%;
+}
+
+th, td {
+    padding: 20px;
+    border: 2px solid #007bff; /* Borde azul brillante */
+    text-align: center;
+}
+
+thead th, tfoot th, caption {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* Texto blanco para encabezados */
+    text-shadow: 1px 1px 1px black;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Fondo oscuro con degradado */
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #333333; /* Fondo gris oscuro para filas impares */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a; /* Fondo negro para filas pares */
+}
+
+tbody tr:hover {
+    background-color: #444444; /* Color gris medio al pasar el ratón sobre una fila */
+}
+
+/* Estilos para los botones en su estado normal */
+button {
+    background-color: #007BFF; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Cambia el color cuando el botón está en hover (ratón encima) */
+button:hover {
+    background-color: #0056b3; /* Un tono más oscuro de azul */
+}
+
+/* Estilos para cuando el botón está enfocado (usando el teclado) */
+button:focus {
+    outline: none; /* Elimina el borde por defecto */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Añade un resplandor azul */
+}
+
+/* Estilos para cuando el botón está activo (cuando se pulsa) */
+button:active {
+    background-color: #004085; /* Aún más oscuro al hacer clic */
+    transform: scale(0.95); /* Añade un pequeño efecto de compresión */
+}
