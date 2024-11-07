@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos sobre la Epilepsia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
+  <!-- script de Google Translate -->
+    <meta name="google" content="notranslate">
+    <script>
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en'}, 'google_translate_element');
+      }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script para traducir automáticamente la página al inglés -->
+    <script>
+      function translatePageToEnglish() {
+          var select = document.querySelector('.goog-te-combo');
+          if (select) {
+              select.value = 'en'; // Idioma inglés
+              select.dispatchEvent(new Event('change')); // Forzar la traducción
+          }
+      }
+
+      window.onload = translatePageToEnglish; // Traducir la página automáticamente al inglés
+    </script>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../estilos/predeterminado.css" title="Estilo predeterminado">
+
+    <!-- Estilo alternativo modo noche -->
+    <link rel="alternate stylesheet" href="../estilos/modo_noche.css" title="Modo Noche">
+    
+    <!-- Estilo alternativo alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/alto_contraste.css" title="Alto Contraste">
+
+    <!-- Estilo para impresión -->
+    <link rel="stylesheet" href="../estilos/impresion.css" media="Impresion">
+
+    <!-- Estilo accesible -->
+    <link rel="alternate stylesheet" href="../estilos/accesible.css" title="Estilo Accesible">
+
+    <!-- Estilo accesible y alto contraste -->
+    <link rel="alternate stylesheet" href="../estilos/accesible_altocontraste.css" title="Accesible Alto Contraste">
+   
+<script>
+   var estiloActual = 'Estilo predeterminado'; // Variable para rastrear el estilo actual
+   var idiomaActual = 'es'; // Idioma actual
+
+        function cambiarEstilo(nuevoEstilo) {
+            var enlaces = document.getElementsByTagName("link");
+            for (var i = 0; i < enlaces.length; i++) {
+                if (enlaces[i].getAttribute("rel").indexOf("stylesheet") !== -1 && enlaces[i].getAttribute("title")) {
+                    enlaces[i].disabled = true; // Deshabilitar todos los estilos
+                    if (enlaces[i].getAttribute("title") === nuevoEstilo) {
+                        enlaces[i].disabled = false; // Habilitar el estilo seleccionado
+                    }
+                }
+            }
+
+            // Actualizar el estilo actual
+            estiloActual = nuevoEstilo;
+
+            // Actualizar el icono del botón de modo noche
+            actualizarIcono(estiloActual);
+        }
+
+        function actualizarIcono(estilo) {
+            var botonNoche = document.getElementById('modo-noche');
+            if (estilo === 'Modo Noche') {
+                botonNoche.innerHTML = '<i class="fas fa-sun"></i> Modo Día'; // Icono de sol
+            } else {
+                botonNoche.innerHTML = '<i class="fas fa-moon"></i> Modo Noche'; // Icono de luna
+            }
+        }
+
+        // Función para manejar el clic en el botón de modo noche
+        function toggleModoNoche() {
+            if (estiloActual === 'Modo Noche') {
+                cambiarEstilo('Estilo predeterminado'); // Volver al estilo original
+            } else {
+                cambiarEstilo('Modo Noche'); // Cambiar a modo noche
+            }
+        }
+
+    </script>
+<!-- Estilos adicionales para el video de Amara -->
+<style>
+  .amara-embed {
+    width: 560px;
+    height: 315px;
+    max-width: 100%;
+  }
+</style>
+
+</head>
+<body>
+<div id="google_translate_element"></div>
+<a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+
+    <header>
+<a href="../index.html" aria-label="Volver a la página principal">
+            <img src="../imagenes/logo.png" alt="MedlinePlus Logo">
+        </a>
+<p>Estás en: <a href="../index.html">Página Principal></a><a href="../videos/videos_epilepsia.html">Videos sobre la Epilepsia</a><!-- Botones para cambiar el estilo -->
+    	<div style="margin: 20px 0;">
+        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
+        <button id="modo-noche" onclick="toggleModoNoche()"><i class="fas fa-moon"></i> Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
+        <button onclick="cambiarEstilo('Accesible Alto Contraste')">Accesible Alto Contraste</button>
+        </div>
+        <h1>MedlinePlus</h1>
+        <p>Información de salud para usted</p>
+    </header>
+
+<main>
+<h2>Videos sobre la Epilepsia</h2>
+
+<!-- 1. Video de YouTube -->
+ <section>
+            <h3>Video de YouTube</h3>
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zz6qYlFuD9E" title="Video YouTube sobre la Epilepsia" allowfullscreen></iframe>
+</section>
+			
+<!-- 2. Video local usando la etiqueta <video> -->
+ <section>
+            <h3>Video Local</h3>
+    			<video width="560" height="315" controls>
+        		<source src="video_epilepsia.mp4" type="video/mp4">
+        		<track src="subtitulos_epilepsia_es.txt" kind="subtitles" srclang="es" label="Español">
+        		<track src="subtitulos_epilepsia_en.txt" kind="subtitles" srclang="en" label="English">
+   			</video>
+ </section>
+
+<!-- 3. Video con subtítulos a través de Amara -->
+<section>
+            <h3>Video con Amara</h3>
+    	<div class="amara-embed" data-url="http://www.youtube.com/watch?v=Zz6qYlFuD9E" data-team="null"></div>
+        <script type="text/javascript" src="https://amara.org/embedder-iframe"></script>
+</section>
+</main>
+ <footer> 
+ 	<address>
+ 	<p><a href="mailto:avy2@alu.ua.es"><i class="fas fa-envelope"></i> Alba Valdivia Yáñez</a> &copy;</p>
+        <p>Universidad de Alicante</p>
+ 	</address>
+ </footer>
+</body>
+</html>
+
