@@ -2,16 +2,16 @@
 
 /* Variables CSS */
         :root {
-           --color-principal: #007bff; /* Color principal para enlaces */
+           --color-principal: #0056b3; /* Color principal para enlaces */
            --color-fondo: #f9f9f9; /* Color de fondo para artículos */
            --color-titulo: #d35400; /* Color para títulos */
-           --color-texto: #666666; /* Color para el texto de las descripciones */
+           --color-texto: #000; /* Color para el texto de las descripciones */
            --color-hover: orange; /* Color al pasar el ratón sobre enlaces */
            --color-footer: #0056b3; /* Color del fondo del footer */
-           --color-footer-texto: white; /* Color del texto del footer */
+           --color-footer-texto: #ffffff; /* Color del texto del footer */
            --color-foco: #0056b3; /* Color del borde cuando hay foco */
            --color-fondo-foco: rgba(0, 123, 255, 0.1); /* Fondo ligero al hacer foco */
-	   --color-articulo: #ff69b4; /* Color rosa para títulos de artículos */
+	   --color-articulo: #b90589; /* Color rosa para títulos de artículos */
         }
 
 	/* Enlace "Saltar a" */
@@ -141,10 +141,10 @@
     	#temas-destacados article {
             background-color: var(--color-fondo);
             padding: 10px;
-	    border: 1px solid #ddd;
+	        border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	    overflow: hidden; /* Evitar que el contenido desborde el área del artículo */
+	        overflow: hidden; /* Evitar que el contenido desborde el área del artículo */
     	}
 	
 
@@ -314,7 +314,7 @@ header img {
         input[type="submit"] {
             width: 100%;
             background-color: var(--color-principal);
-            color: white;
+            color: #ffffff;
             border: none;
             padding: 12px 0;
             font-size: 18px;
@@ -353,7 +353,7 @@ header img {
 /* Estilos para los botones en su estado normal */
 button {
     background-color: #007BFF; /* Color de fondo azul */
-    color: white; /* Color del texto */
+    color: #ffffff; /* Color del texto */
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
