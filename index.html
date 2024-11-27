@@ -95,16 +95,16 @@
     <!-- Enlace Saltar a contenido principal -->
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
     <header>
-        <img src="imagenes/logo.png" alt="MedlinePlus Logo">
+        <img src="imagenes/logo.png" alt="Logo de MedlinePlus">
 	<p>Estás en: <a href="index.html">Página Principal</a></p>
 	
 	<!-- Botones para cambiar el estilo -->
     	<div style="margin: 20px 0;">
-        <button onclick="cambiarEstilo('Estilo predeterminado')">Estilo Predeterminado</button>
-        <button id="modo-noche" onclick="toggleModoNoche()"><i class="fas fa-moon"></i> Modo Noche</button>
-        <button onclick="cambiarEstilo('Alto Contraste')">Alto Contraste</button>
-        <button onclick="cambiarEstilo('Estilo Accesible')">Estilo Accesible</button>
- 	<button onclick="cambiarEstilo('Accesible Alto Contraste')">Accesible Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo predeterminado')" aria-label="Activar estilo Predeterminado">Estilo Predeterminado</button>
+	<button id="modo-noche" onclick="toggleModoNoche()" aria-label="Activar o desactivar Modo Noche"><i class="fas fa-moon" aria-hidden="true"></i><i class="fas fa-sun" aria-hidden="true"></i> Modo Noche</button>
+        <button onclick="cambiarEstilo('Alto Contraste')"aria-label="Activar estilo de Alto Contraste">Alto Contraste</button>
+        <button onclick="cambiarEstilo('Estilo Accesible')"aria-label="Activar estilo Accesible">Estilo Accesible</button>
+ 	<button onclick="cambiarEstilo('Accesible Alto Contraste')"aria-label="Activar estilo de Alto Contraste">Accesible Alto Contraste</button>
         </div>
 
         <h1>MedlinePlus</h1>
@@ -173,8 +173,8 @@
                     	<h2><a href="https://www.mayoclinic.org/es/diseases-conditions/asthma/symptoms-causes/syc-20369653"><i class="fas fa-lungs"></i> Artículo 1: Asma</a></h2>
                 	<p>El asma es una enfermedad crónica que afecta a personas de todas las edades. Se debe a la inflamación y la contracción de los músculos que rodean las vías respiratorias, las cuales dificultan la respiración.</p>
 	 		<figure>
-                	<img src="imagenes/asma.jpg" alt="Imagen Asma">
-<figcaption>Asma: Enfermedad crónica que afecta las vías respiratorias.</figcaption>
+                	<img src="imagenes/asma.jpg" alt="Ilustración sobre el Asma, muestra el proceso respiratorio afectado.">
+		        <figcaption>Asma: Enfermedad crónica que afecta las vías respiratorias.</figcaption>
                 	</figure>
                 	<p>Para más información haga clic en los siguientes enlaces:</p>
                 	<a href="https://www.mayoclinic.org/es/diseases-conditions/asthma/symptoms-causes/syc-20369653">Leer el artículo sobre el Asma </a><br><br>
@@ -222,7 +222,8 @@
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si desea ponerse en contacto con nosotros, por favor rellene el siguiente formulario:</p>
-            <a href="formularios/formulariocontacto.html"><i class="fas fa-envelope"></i> Rellenar el Formulario de Contacto</a>
+            <label id="contact-label">Contacto</label>
+	    <a href="formularios/formulariocontacto.html" aria-labelledby="contact-label"><i class="fas fa-envelope"></i> Rellenar el Formulario de Contacto</a>
         </section>
 	 
 	<section id="Formulario">
