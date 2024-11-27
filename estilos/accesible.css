@@ -448,7 +448,7 @@ button {
 
 /* Cambia el color cuando el botón está en hover (ratón encima) */
 button:hover {
-    background-color: #0056b3; /* Un tono más oscuro de azul */
+    background-color: var(--color-hover); /* Un tono más oscuro de azul */
 }
 
 /* Estilos para cuando el botón está enfocado (usando el teclado) */
