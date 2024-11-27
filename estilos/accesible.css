@@ -436,7 +436,7 @@ header img {
 
 /* Estilos para los botones en su estado normal */
 button {
-    background-color: #007BFF; /* Color de fondo azul */
+    background-color: var(--color-principal); /* Color de fondo azul */
     color: white; /* Color del texto */
     border: none;
     padding: 10px 20px;
